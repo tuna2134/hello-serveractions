@@ -31,7 +31,7 @@ spec:
         - name: NEXT_PUBLIC_SECRET_KEY
           valueFrom:
             secretKeyRef:
-              name: hello-severactions-secret
+              name: hello-serveractions-secret
               key: secret-key
 ---
 apiVersion: v1
