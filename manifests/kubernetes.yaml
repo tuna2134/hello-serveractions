@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hcaptcha-deployment
+  name: hello-serveractions-deployment
   labels:
     app: web
 spec:
@@ -30,13 +30,13 @@ spec:
           value: "0.0.0.0"
         - name: NEXT_PUBLIC_SECRET_KEY
           valueFrom:
-            name: hcaptcha-secret
+            name: hello-severactions-secret
             key: secret-key
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: hcaptcha
+  name: hello-serveractions
 spec:
   selector:
     app: web
